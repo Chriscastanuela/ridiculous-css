@@ -33,7 +33,7 @@ body, html {
     min-height: 60%;
 }
 
-.section {
+.section-p1 {
     text-align: center;
     padding: 50px 80px;
 }
@@ -72,6 +72,65 @@ body, html {
 
 .ptext .border.trans {
     background-color: transparent;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+.parallax-2 {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax-2:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #667, transparent);
+    z-index: 10000;
+}
+
+.parallax-2:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #667;
+    z-index: 10000;
+    mix-blend-mode: color;
+}
+
+.p2-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#p2-text {
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    z-index: 1;
+}
+
+#p2-road {
+    z-index: 2;
 }
 
 @media(max-width:568px) {

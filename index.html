@@ -8,6 +8,32 @@
     <title>CSS Examples</title>
 </head>
 <body>
+    <!-- Parallax 2 ///////////////////////////////////////////////////////-->
+    <!-- Parallax 2 ///////////////////////////////////////////////////////-->
+    <section class='parallax-2'>
+        <img src="./images/parallax2/bg.jpg" class="p2-img" id='p2-bg' alt="background">
+        <img src="./images/parallax2/moon.png" class="p2-img" id='p2-moon' alt="moon">
+        <img src="./images/parallax2/mountain.png" class="p2-img" id='p2-mountain' alt="mountain">
+        <img src="./images/parallax2/road.png" class="p2-img" id='p2-road' alt="road">
+        <h2 id="p2-text">Moon Light</h2>
+    </section>
+    <script type="text/javascript">
+        let bg = document.getElementById('p2-bg');
+        let moon = document.getElementById('p2-moon');
+        let mountain = document.getElementById('p2-mountain');
+        let road = document.getElementById('p2-road');
+        let text = document.getElementById('p2-text');
+        
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            
+            bg.style.top = value * .5 + 'px';
+            moon.style.left = -value * .5 + 'px';
+            mountain.style.top = -value * .15 + 'px';
+            road.style.top = value * .15 + 'px';
+            text.style.top = value * 1 + 'px';
+        })
+    </script>
     <!-- Parallax 1 ///////////////////////////////////////////////////////-->
     <div class="pimg1">
         <div class="ptext">
@@ -16,7 +42,7 @@
             </span>
         </div>
     </div>
-    <section class="section section-light">
+    <section class="section-p1 section-light">
         <h2>Section One</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur quaerat sed cumque laudantium fugiat reiciendis tempore dolores nam ullam nostrum itaque quasi! Perspiciatis voluptatum, magnam corrupti sed modi, cum laudantium, quos explicabo voluptatibus dolor ipsum fugiat. Nobis, recusandae impedit quam necessitatibus nihil pariatur provident enim beatae dolores voluptatum fugit rem deserunt ea quos! Odit consectetur laboriosam aut quisquam aspernatur ut quas laudantium recusandae obcaecati inventore tenetur, pariatur alias perferendis expedita eos sed nulla quasi excepturi consequatur facere ex repudiandae assumenda. Consectetur, vero ducimus veniam eligendi debitis magni consequuntur in dolorum quibusdam delectus. Ex possimus ratione quae tenetur nisi dolore!</p>
     </section>
@@ -27,7 +53,7 @@
             </span>
         </div>
     </div>
-    <section class="section section-dark">
+    <section class="section-p1 section-dark">
         <h2>Section Two</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur quaerat sed cumque laudantium fugiat reiciendis tempore dolores nam ullam nostrum itaque quasi! Perspiciatis voluptatum, magnam corrupti sed modi, cum laudantium, quos explicabo voluptatibus dolor ipsum fugiat. Nobis, recusandae impedit quam necessitatibus nihil pariatur provident enim beatae dolores voluptatum fugit rem deserunt ea quos! Odit consectetur laboriosam aut quisquam aspernatur ut quas laudantium recusandae obcaecati inventore tenetur, pariatur alias perferendis expedita eos sed nulla quasi excepturi consequatur facere ex repudiandae assumenda.</p>
     </section>
@@ -38,7 +64,7 @@
             </span>
         </div>
     </div>
-    <section class="section section-dark">
+    <section class="section-p1 section-dark">
         <h2>Section Three</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, pariatur quaerat sed cumque laudantium fugiat reiciendis tempore dolores nam ullam nostrum itaque quasi! Perspiciatis voluptatum, magnam corrupti sed modi, cum laudantium, quos explicabo voluptatibus dolor ipsum fugiat. Nobis, recusandae impedit quam necessitatibus nihil pariatur provident enim beatae dolores voluptatum fugit rem deserunt ea quos! Odit consectetur laboriosam aut quisquam aspernatur ut quas laudantium recusandae obcaecati inventore tenetur, pariatur alias perferendis expedita eos sed nulla quasi excepturi consequatur facere ex repudiandae assumenda.</p>
     </section>
@@ -49,6 +75,7 @@
             </span>
         </div>
     </div>
+    <!-- Parallax 1 ///////////////////////////////////////////////////////-->
     <!-- Parallax 1 ///////////////////////////////////////////////////////-->
 </body>
 </html>
